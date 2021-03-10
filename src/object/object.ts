@@ -22,4 +22,34 @@ export default function objectSample(): void {
   }
 
   console.log('Object object sample 2:', country)
+
+  // オプショナルとreadonly
+  const torahack: {
+    lastName: string
+    readonly firstName: string
+    gender?: string
+  } = {
+    age: 28,
+    lastName: 'Yamada',
+    firstName: 'Tarou',
+  }
+
+  torahack.gender = 'male'
+  torahack.lastName = 'Kamado'
+  // torahack.firstName = 'Tanjiro'
+
+  console.log('Object object sample 3:', torahack)
+
+  // インデックスシグネチャ
+  const capitals: {
+    [countryName: string]: string
+  } = {
+    Japan: 'Tokyo',
+    Korea: 'Seoul',
+  }
+
+  capitals.china = 'Beijing'
+  capitals.Canada = 'Ottawa'
+
+  console.log('Object object sample 4:', capitals)
 }
